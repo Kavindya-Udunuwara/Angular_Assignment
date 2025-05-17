@@ -1,0 +1,20 @@
+<h1>Famous Places in Sri Lanka</h1>
+
+<div class="post-grid">
+    <app-post-card
+      *ngFor="let post of posts; let i = index"
+      [post]="post"
+      [index]="i"
+    ></app-post-card>
+  </div>
+  
+
+  <div class="load-more-wrapper" *ngIf="hasMore">
+    <button (click)="loadMore()" class="load-more-btn">Load More</button>
+  </div>
+  
+
+<!-- Show this message only when no more posts to load -->
+<p *ngIf="!hasMore && posts.length > 0" class="no-more-posts">
+  No more posts.
+</p>
