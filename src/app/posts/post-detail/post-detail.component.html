@@ -1,0 +1,27 @@
+<div class="mainConatiner">
+  <button (click)="goBack()" class="back-button">Back</button>
+  <div class="post-details-container" *ngIf="post; else loading">
+    <div class="post-content">
+      <h1>{{ post.title }}</h1>
+
+      <div class="post-tags">
+        <strong>Tags:</strong>
+        <ng-container *ngFor="let tag of post.tags; let last = last">
+          <a class="tag">{{ tag }}</a
+          ><span *ngIf="!last">, </span>
+        </ng-container>
+      </div>
+
+      <p>{{ post.body }}</p>
+      <p class="post-date">
+        <small>Posted on {{ post.createdAt | date : "mediumDate" }}</small>
+      </p>
+    </div>
+
+    <app-comment [comments]="comments"></app-comment>
+  </div>
+
+  <ng-template #loading>
+    <p>Loading post...</p>
+  </ng-template>
+</div>

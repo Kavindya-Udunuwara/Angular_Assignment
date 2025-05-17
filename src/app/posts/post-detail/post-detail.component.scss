@@ -1,0 +1,101 @@
+
+
+.mainConatiner {
+    padding: 2%;
+    margin: 0;
+    background: linear-gradient(155deg, #d6e4e6, #93c7cd);
+  }
+  
+.post-details-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    
+    padding: 2rem;
+   
+  
+    // Side-by-side layout on desktop (width ≥ 1024px)
+    @media (min-width: 1024px) {
+      flex-wrap: nowrap;
+    }
+  }
+  
+  .post-content {
+    flex: 2 1 60%;
+    min-width: 300px;
+  
+    h2 {
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+  
+    .post-tags {
+      margin-bottom: 1rem;
+  
+      .tag {
+        display: inline-block;
+        background-color: #e0f7fa; // light teal, friendly for travel/tourism
+        color: #007b8a;           // matching teal
+        padding: 0.2rem 0.5rem;
+        border-radius: 12px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #b2ebf2;
+        }
+      }
+    }
+  
+    p {
+      line-height: 1.6;
+      text-align: justify;
+      font-size: 1.2rem;
+    }
+  
+    .post-date {
+      margin-top: 1rem;
+      color: #666;
+      font-style: italic;
+    }
+  }
+  
+  app-comment {
+    flex: 1 1 35%;
+    min-width: 280px;
+  }
+  
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #0056b3;   // nice blue background
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 0;
+  
+    &:hover {
+      background-color: #06e170;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    }
+  
+    &::before {
+      content: "←";            // arrow icon before text
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  h1 {
+    color:#032a40;
+    font-size: 3rem;
+  }
+  
