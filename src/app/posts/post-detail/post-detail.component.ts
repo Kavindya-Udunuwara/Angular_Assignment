@@ -16,6 +16,7 @@ import { CommentComponent } from '../comment/comment.component';
 export class PostDetailComponent implements OnInit {
   post!: Post;
   comments: Comment[] = [];
+  index: number = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -25,11 +26,16 @@ export class PostDetailComponent implements OnInit {
 
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id')!;
+    this.index = id;  // Use the route param as index
     this.post = this.postService.getPost(id);
     this.comments = this.postService.getComments(id);
   }
 
   goBack(): void {
     this.location.back();
+  }
+
+  get detailClass(): string {
+    return `bg-color-${this.index % 5}`;
   }
 }

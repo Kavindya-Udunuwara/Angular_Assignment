@@ -3,8 +3,25 @@
 .mainConatiner {
     padding: 2%;
     margin: 0;
-    background: linear-gradient(155deg, #d6e4e6, #93c7cd);
+   
   }
+
+  .bg-color-1 {
+    background: linear-gradient(100deg, #d6e4e6, #93c7cd); /* light blue */
+  }
+  .bg-color-2 {
+    background: linear-gradient(100deg, #f9eed2, #ffe5b4); /* light sand gradient */
+  }
+  .bg-color-3 {
+    background: linear-gradient(100deg, #d2ebd4, #c4f0c5); /* light green gradient */
+  }
+  .bg-color-4 {
+    background: linear-gradient(100deg, #fbd1d2, #ffb6b9); /* light pink gradient */
+  }
+  .bg-color-0 {
+    background: linear-gradient(100deg, #fbe5c9, #ffd6a5); /* light orange gradient */
+  }
+  
   
 .post-details-container {
     display: flex;
@@ -34,8 +51,8 @@
   
       .tag {
         display: inline-block;
-        background-color: #e0f7fa; // light teal, friendly for travel/tourism
-        color: #007b8a;           // matching teal
+        background-color: #b8c2c4; // light teal, friendly for travel/tourism
+        color: #01013a;           // matching teal
         padding: 0.2rem 0.5rem;
         border-radius: 12px;
         text-decoration: none;
@@ -44,7 +61,8 @@
         transition: background-color 0.3s ease;
   
         &:hover {
-          background-color: #b2ebf2;
+          background-color: #010b2d;
+          color: white;
         }
       }
     }
