@@ -1,0 +1,12 @@
+<div class="post-comments">
+    <h3>Comments ({{ comments.length }})</h3>
+    <div class="comment" *ngFor="let comment of comments">
+      <h4>
+        <span class="user-icon">👤</span>
+        {{ comment.name }}
+      </h4>
+      <p class="email"><em>{{ comment.email }}</em></p>
+      <p>{{ comment.body }}</p>
+    </div>
+  </div>
+  
