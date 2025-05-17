@@ -20,7 +20,7 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: PostListComponent },
-      { path: 'posts/:id', component: PostDetailsComponent },
+      { path: 'posts/:id', component: PostDetailComponent },
       { path: '**', redirectTo: '' }
     ])
   ],
