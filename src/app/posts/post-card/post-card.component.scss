@@ -1,0 +1,59 @@
+.bg-color-0 {
+  background-color: #a8dadc; // light blue
+}
+.bg-color-1 {
+  background-color: #ffe5b4; // light sand
+}
+.bg-color-2 {
+  background-color: #c4f0c5; // light green
+}
+.bg-color-3 {
+  background-color: #ffb6b9; // light pink
+}
+.bg-color-4 {
+  background-color: #ffd6a5; // light orange
+}
+
+.post-card {
+  min-width: 200px;
+  min-height: 270px;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.12);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    min-height: 230px;
+  }
+
+  @media (max-width: 767px) {
+    min-height: 150px;
+  }
+
+  &:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #04194a; // dark teal for contrast
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+    color: #333;
+    flex-grow: 1;
+    overflow: hidden;
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+}

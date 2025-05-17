@@ -1,0 +1,4 @@
+<div class="post-card" [ngClass]="cardClass" (click)="goToDetail()">
+  <h3>{{ post.title }}</h3>
+  <p>{{ post.body | slice : 0 : 280 }}...</p>
+</div>
