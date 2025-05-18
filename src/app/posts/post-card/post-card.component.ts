@@ -27,4 +27,10 @@ export class PostCardComponent {
     return `bg-color-${this.index % 5}`;
   }
 
+  truncate(text: string | undefined, maxLength: number = 100): string {
+    if (!text) return '';
+    return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
+  }
+  
+
 }
